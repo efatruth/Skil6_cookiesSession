@@ -9,6 +9,13 @@ import os
 from os import environ as env
 from sys import argv
 
+from sys import argv
+
+import bottle
+from bottle import *
+
+bottle.debug(True)
+
 @route("/")
 def index():
     nyar_vorur = []
@@ -33,5 +40,4 @@ def sida2():
 
     return template('vara', num=voru_num)
 
-
-run(host='localhost',port=8080,debug=True,reloader=True)
+bottle.run(host='0.0.0.0', port=argv[1])
