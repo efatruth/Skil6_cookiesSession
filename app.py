@@ -9,10 +9,6 @@ import os
 from os import environ as env
 from sys import argv
 
-from sys import argv
-
-import bottle
-from bottle import *
 
 bottle.debug(True)
 
